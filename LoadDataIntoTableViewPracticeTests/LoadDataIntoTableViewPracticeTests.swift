@@ -17,7 +17,7 @@ class LoadDataIntoTableViewPracticeTests: XCTestCase {
 
     func testPerformanceExample() {
         self.measure {
-            _ = FibonacciNumber.fib(n: 90)
+            _ = FibonacciNumber.fib(n: 10_000)
         }
     }
 }

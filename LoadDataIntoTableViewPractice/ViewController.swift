@@ -2,7 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var fibNumbers = [Int]() {
+    var fibNumbers = [Double]() {
         didSet {
             tableView.reloadData()
         }
@@ -53,7 +53,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fibCell", for: indexPath)
-        cell.textLabel?.text = "\(fibNumbers[indexPath.row])"
+        cell.textLabel?.text = String(format: "%g", fibNumbers[indexPath.row])
         return cell
     }
 }
